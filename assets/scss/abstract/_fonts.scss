@@ -1,0 +1,16 @@
+@use "../abstract/variables" as vstyle;
+
+@font-face {
+    font-family: vstyle.$font-titre ;
+    src: url(../fonts/Arvo-Bold.ttf);
+}
+
+@font-face {
+    font-family: vstyle.$font-text;
+    src: url(../fonts/static/Bitter-Black.ttf);
+}
+
+@font-face {
+    font-family: vstyle.$font-name;
+    src: url(../fonts/BungeeShade-Regular.ttf);
+}

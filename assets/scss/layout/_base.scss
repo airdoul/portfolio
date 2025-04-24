@@ -1,0 +1,59 @@
+@use "../abstract/variables" as vstyle;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: vstyle.$bg-color;
+
+    h1, h2, h3{
+        text-transform: uppercase;
+        text-align: center;
+        font-family: vstyle.$font-titre;
+        color: vstyle.$text-color;
+    }
+    h1 {
+        font-size: 3rem;
+    } 
+    h2 {
+        font-size: 2rem;
+        border-bottom: 1px solid vstyle.$text-color ;
+        border-bottom-width: 80%;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    .name{
+        text-transform: uppercase;
+        font-family: vstyle.$font-name;
+        color: vstyle.$text-color-second;
+        font-size: 3rem; 
+        position: relative;
+        display: inline-block;
+        transition: transform 0.1s; 
+    }
+
+    p, li {
+        font-size: 1rem;
+        font-family: vstyle.$font-text;
+        color: vstyle.$text-color;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    a {
+        text-decoration: none;
+        color: vstyle.$color-up;
+    }
+
+    textarea,
+    input,
+    button {
+        font-family: vstyle.$font-text;
+    }
+
+}

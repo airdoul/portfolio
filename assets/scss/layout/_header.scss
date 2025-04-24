@@ -1,0 +1,17 @@
+
+header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    .logogrid{
+        width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    img {
+       width: 4vw;
+    }
+ }
+ 
