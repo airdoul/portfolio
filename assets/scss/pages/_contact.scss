@@ -1,1 +1,79 @@
 @use "../abstract/variables" as vstyle;
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    a{
+        color: vstyle.$text-color;
+    }
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  form {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      input, textarea {
+        padding: 10px 15px;
+        width: 270px;
+        border: 1px solid vstyle.$input-border;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        color: #333;
+        background-color: #fff;
+
+        &::placeholder {
+          color: #bbb;
+          font-weight: 400;
+        }
+      }
+
+      textarea {
+        resize: none;
+        height: 140px;
+      }
+
+      button {
+        align-self: center;
+        margin-top: 15px;
+        padding: 10px 30px;
+        background-color: vstyle.$color-up;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: vstyle.$button-hover;
+        }
+      }
+    }
+
+    .labels {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: flex-start;
+      padding-top: 5px;
+
+      label {
+        font-size: 2rem;
+        color: vstyle.$text-color;
+      }
+    }
+  }
+}

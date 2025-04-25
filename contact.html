@@ -9,6 +9,38 @@
 </head>
 <body>
   <div id="header-container"></div>
+  <main class="container">
+    <section>
+      <h2>Contact</h2>
+      <div class="contacts">
+        <p>Email : <a href="mailto:airdoule@hotmail.com" target="_blank">airdoule@hotmail.com</a></p>
+        <p>aGithub : <a href="https://github.com/airdoul?" target="_blank">https://github.com/airdoul?</a></p>
+      </div>
+    </section>
+    <h2>Laissez moi un message, posez moi une question</h2>
+    <section>
+      <div class="form-container">
+        <form id="contact-form">
+          <div class="inputs">
+            <input type="text" name="nom" id="nom" placeholder="Nom" required />
+            <input type="text" name="prenom" id="prenom" placeholder="Prénom" required />
+            <input type="text" name="surnom" id="surnom" placeholder="Surnom" />
+            <input type="email" name="email" id="email" placeholder="Email" required />
+            <textarea name="message" id="message" placeholder="Message" required></textarea>
+            <button type="submit">Envoyer</button>
+          </div>
+          <div class="labels">
+            <label for="nom">Nom</label>
+            <label for="prenom">Prénom</label>
+            <label for="surnom">Surnom</label>
+            <label for="email">Email</label>
+            <label for="message">Message</label>
+          </div>
+        </form>
+        <div id="form-message" class="form-message"></div>
+      </div>
+    </section>
+  </main>
   
   <script src="header-loader.js"></script>
   <script src="script.js"></script> 

@@ -29,14 +29,14 @@ body {
         text-transform: uppercase;
         font-family: vstyle.$font-name;
         color: vstyle.$text-color-second;
-        font-size: 3rem; 
+        // font-size: 3rem; 
         position: relative;
         display: inline-block;
         transition: transform 0.1s; 
     }
 
     p, li {
-        font-size: 1rem;
+        font-size: 1.3rem;
         font-family: vstyle.$font-text;
         color: vstyle.$text-color;
     }

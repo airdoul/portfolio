@@ -3,6 +3,7 @@ function initMenu() {
   const menuBtn = document.querySelector(".menu-btn");
   const menuContainer = document.querySelector(".menu-container");
   const menuIcon = document.querySelector(".menu-icon");
+  const carouselZone = document.querySelector(".carousel-zone");
 
   let menuOpen = false;
 
@@ -16,6 +17,8 @@ function initMenu() {
       menuIcon.src = menuOpen
         ? "assets/img/close.svg"
         : "assets/img/grip-solid.svg";
+
+    carouselZone.classList.toggle("hidden", menuOpen);
 
       console.log("Menu clicked, now open:", menuOpen);
     });

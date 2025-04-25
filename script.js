@@ -71,3 +71,38 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
   
     updateCarousel();
   });
+
+  // formulaire envoi de mail 
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
+    const messageBox = document.getElementById("form-message");
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+  
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+  
+      try {
+        const response = await fetch("https://formspree.io/f/xpwdwzwg", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        });
+  
+        if (response.ok) {
+          messageBox.textContent = "Message envoyé avec succès !";
+          messageBox.style.color = "green";
+          form.reset();
+        } else {
+          messageBox.textContent = "Erreur lors de l'envoi du message.";
+          messageBox.style.color = "red";
+        }
+      } catch (error) {
+        messageBox.textContent = "Erreur réseau.";
+        messageBox.style.color = "red";
+      }
+    });
+  });

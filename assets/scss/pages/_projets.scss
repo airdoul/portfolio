@@ -124,18 +124,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    max-height: 60vh;
   }
   
   .carousel {
     display: none;
     // position: absolute;
-    top: 0;
-    left: 100%;
-    width: 35vw;
-    background: white;
+    background: rgba(255, 255, 255, 0);
     z-index: 1000;
     padding: 1rem;
+    border-radius: vstyle.$border-radius;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.3s ease-in-out forwards;
     overflow: hidden; 
@@ -149,14 +147,16 @@ header {
   .carousel-track {
     display: flex;
     transition: transform 0.3s ease-in-out;
-    width: 100%;
   }
   
   .carousel img {
     width: 100%;
     flex-shrink: 0;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
+  }
+  .carousel-zone.hidden {
+    display: none !important;
   }
   
   /* Boutons */
@@ -165,7 +165,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
     font-size: 2rem;
-    background: rgba(255, 255, 255, 0.8);
+    background: vstyle.$color-up;
     border: none;
     cursor: pointer;
     z-index: 10;
@@ -178,6 +178,14 @@ header {
   .carousel-btn.next {
     right: 0.5rem;
   }
+  
+  .carousel-projet {
+    width: 40vw;
+    img{
+        object-fit: contain;
+        max-height: 60vh;
+    }
+}
 
 @keyframes fadeIn {
   from {
@@ -204,3 +212,4 @@ header {
       height: auto;
     }
   }
+
