@@ -3,6 +3,11 @@ header {
    display: flex;
    justify-content: center;
    align-items: center;
+   .logo:hover{
+      animation: clignote 2s infinite;
+      color: #00ffff;
+      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+   }
     .logogrid{
         width: 80vw;
         display: flex;
@@ -11,7 +16,17 @@ header {
         padding: 1rem;
     }
     img {
-       width: 4vw;
+       width: 4.5rem;
     }
+
  }
- 
+ @keyframes clignote {
+   0%, 100% {
+     opacity: 1;
+     text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+   }
+   50% {
+     opacity: 0.6;
+     text-shadow: 0 0 2px #00ffff, 0 0 5px #00ffff;
+   }
+ }

@@ -104,11 +104,11 @@
    z-index: -2;
 }
 
-.hover-active .r { left: 28%; }
-.hover-active .d { left: 36%; }
-.hover-active .trait { opacity: 1; transform: scale(1); }
-.hover-active .e { left: 41%; }
-.hover-active .v { top: 1.75%; left: 47%; }
+.hover-active .r { left: 37%; }
+.hover-active .d { left: 45%; }
+.hover-active .trait { opacity: 1; transform: scale(1); left: 41%; }
+.hover-active .e { left: 50%; }
+.hover-active .v { top: 2.07%; left: 55%; }
 
 @keyframes floating-swing {
    0% { transform: rotate(0deg) translateY(0);}

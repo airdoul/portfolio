@@ -24,7 +24,7 @@ header {
 .container-projets {
     display: flex;
     // justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 2rem;
     width: 80vw;
     padding: 2rem;
@@ -38,10 +38,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     width: 80%;
     max-width: 90vw;
-    font-size: 2rem;
+    font-size: 1.5em;
     color: #417b5a;
 
     .menu-item-lien::before {
@@ -82,7 +82,7 @@ header {
 }
 
 .projet-container {
-    width: 30vw;
+    width: 35vw;
 }
 
 .projets li.project-name:hover {
@@ -137,6 +137,7 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.3s ease-in-out forwards;
     overflow: hidden; 
+    width: 100%;
   }
   
   .carousel.active {
@@ -146,6 +147,7 @@ header {
   
   .carousel-track {
     display: flex;
+    width: auto;
     transition: transform 0.3s ease-in-out;
   }
   

@@ -24,7 +24,7 @@ document.addEventListener("mousemove", (e) => {
   });
 });
 
-// === PROJETS - CAROUSEL ===
+//CAROUSEL 
 document.addEventListener("DOMContentLoaded", () => {
   const projectItems = document.querySelectorAll(".project-name");
   const carousels = document.querySelectorAll(".carousel");
@@ -106,3 +106,18 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
       }
     });
   });
+// scrolling responsive 
+document.addEventListener("DOMContentLoaded", function () {
+  const isResponsive = window.matchMedia("(max-width: 850px)").matches;
+
+  if (isResponsive) {
+    document.querySelectorAll(".mes-projets .projets").forEach((el) => {
+      el.addEventListener("wheel", (e) => {
+        if (e.deltaY !== 0) {
+          e.preventDefault();
+          el.scrollLeft += e.deltaY;
+        }
+      });
+    });
+  }
+});
